@@ -934,7 +934,7 @@ ul.sub-menu-ld-mobile {
 .ldp_omnicare_05122023 .omnicare_takecare .ct_left ul li:before {
     position: absolute;
     content: "";
-    background: url(../images/check-blue-icon.svg) no-repeat;
+    background: url(../../images/check-blue-icon.svg) no-repeat;
     width: 25px;
     height: 25px;
     background-size: cover;
@@ -991,7 +991,7 @@ ul.sub-menu-ld-mobile {
 .ldp_omnicare_05122023 .omnicare_faq .qb_faq_detailds .qb_faq_info:before {
     position: absolute;
     content: "";
-    background: url(../images/omnicare-faq-arr-grey.svg) no-repeat;
+    background: url(../../images/omnicare-faq-arr-grey.svg) no-repeat;
     background-size: cover;
     width: 12px;
     height: 8px;
@@ -1001,7 +1001,7 @@ ul.sub-menu-ld-mobile {
 }
 
 .ldp_omnicare_05122023 .omnicare_faq .qb_faq_detailds.omnicare_current .qb_faq_info:before {
-    background: url(../images/omnicare-faq-arr-orange.svg) no-repeat;
+    background: url(../../images/omnicare-faq-arr-orange.svg) no-repeat;
 }
 
 .ldp_omnicare_05122023 .omnicare_faq .qb_faq_detailds .qb_faq_info strong {
@@ -1088,7 +1088,7 @@ ul.sub-menu-ld-mobile {
 .ldp_omnicare_05122023 .omnicare_manage .manage_inside ul li:before {
     position: absolute;
     content: "";
-    background: url(../images/check-blue-icon.svg) no-repeat;
+    background: url(../../images/check-blue-icon.svg) no-repeat;
     width: 22px;
     height: 22px;
     background-size: cover;
@@ -1318,7 +1318,7 @@ ul.sub-menu-ld-mobile {
 .ldp_omnicare_05122023 .omnicare_form .form_group .list_group select {
     font-style: italic;
     color: #8D8C8C;
-    background: url(../images/select-arr-icon.svg) #fff no-repeat;
+    background: url(../../images/select-arr-icon.svg) #fff no-repeat;
     background-position: 95% 50%;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2230,8 +2230,7 @@ ul.sub-menu-ld-mobile {
         gap: 36px;
     }
 
-    .ldp_omnicare_05122023 .omnicare_partner .ct_left,
-        {
+    .ldp_omnicare_05122023 .omnicare_partner .ct_left {
         width: 100%;
     }
 
@@ -2579,7 +2578,7 @@ ul.sub-menu-ld-mobile {
     .ldp_omnicare_05122023 .footer .middle_ft .middle_ft_menu strong:before {
         position: absolute;
         content: "";
-        background: url(../images/arr-ft-mb.svg) no-repeat;
+        background: url(../../images/arr-ft-mb.svg) no-repeat;
         width: 12px;
         height: 8px;
         top: 50%;

@@ -1,6 +1,6 @@
 {
-    "name": "omnicare",
-    "description": "Omnicare theme",
+    "name": "wave",
+    "description": "A Ghost theme",
     "version": "1.0.0",
     "private": true,
     "engines": {
@@ -8,8 +8,8 @@
     },
     "license": "MIT",
         "author": {
-            "name": "Pham Liem 0312",
-            "email": "liemthanhpham@gmail.com",
+            "name": "Ghost Foundation",
+            "email": "hello@ghost.org",
             "url": "https://ghost.org"
         },
     "keywords": [
@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://wave.ghost.io/about/",
     "config": {
         "posts_per_page": 5,
         "image_sizes": {
@@ -39,7 +40,39 @@
                 "width": 2000
             }
         },
-        "card_assets": true
+        "card_assets": true,
+        "custom": {
+            "navigation_layout": {
+                "type": "select",
+                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "default": "Logo on the left"
+            },
+            "title_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "body_font": {
+                "type": "select",
+                "options": ["Modern sans-serif", "Elegant serif"],
+                "default": "Modern sans-serif"
+            },
+            "apple_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.apple.com/"
+            },
+            "google_podcasts_link": {
+                "type": "text",
+                "default": "https://podcasts.google.com/"
+            },
+            "spotify_link": {
+                "type": "text",
+                "default": "https://open.spotify.com/"
+            },
+            "rss_link": {
+                "type": "text"
+            }
+        }
     },
     "scripts": {
         "dev": "gulp",
