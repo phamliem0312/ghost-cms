@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{^is "blog"}}
+    <title>{{meta_title}}</title>
+    {{else}}
+    <title>{{block "title"}}</title>
+    {{{block "description"}}}
+    {{/is}}
+    <link rel="stylesheet" href="{{asset "css/bootstrap.css"}}">
+    <link rel="stylesheet" href="{{asset "css/jquery-confirm.css"}}">
+    <link rel="stylesheet" href="{{asset "css/animate.css"}}">
+    <link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/slick.css"}}">
+    <link rel="stylesheet" href="{{asset "css/style.css"}}">
+    <link rel="stylesheet" href="{{asset "css/tab-menu.css"}}">
+    {{ghost_head}}
+</head>
+
+<body data-gmoheader="pc">
+    <div class="ldp_omnicare_05122023" id="avt_page_05122023">
+        <header>
+            <div id="menu_mobile_full_secure">
+                <nav class="mobile-menu">
+                    <p class="close_menu"><span><img
+                                src="{{asset "images/icon_close_30x30.png"}}"></span>
+                    </p>
+                    <div class="menu-menu-chinh-container">
+                        <ul class="menu">
+                            <li class="diem1 active not-have-child"><a href="#" rel="1">Tính năng</a></li>
+                            <li class="diem2 not-have-child"><a href="#" rel="2">Ứng dụng</a></li>
+                            <li class="diem3 not-have-child"><a href="#" rel="3">Điểm độc đáo</a></li>
+                            <li class="diem4 not-have-child"><a href="#" rel="4">Hướng dẫn mua sắm</a></li>
+                            <li class="diem5 not-have-child"><a href="#" rel="5">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="omnicare_json_bg">
+                <div class="omnicare_json_element omnicare_json_desktop">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player
+                        src="{{asset "images/Background-animation.png"}}" loop="" autoplay="" background="transparent"></lottie-player>
+                </div>
+                <div class="omnicare_json_element omnicare_json_mobile">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="{{asset "images/animation-mobile.png"}}"
+                        loop="" autoplay="" background="transparent"></lottie-player>
+                </div>
+                <div class="omnicare_json_element omnicare_json_tabnet">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="{{asset "images/animation-tablet.json"}}"
+                        loop="" autoplay="" background="transparent"></lottie-player>
+                </div>
+                <div class="header">
+                    <div class="container">
+                        <div class="hd_ct">
+                            <div class="ct_left">
+                                <figure><a href="#"><img
+                                            src="{{asset "images/omnicare-logo.svg"}}"></a>
+                                </figure>
+                            </div>
+                            <div class="ct_right">
+                                <div class="phone_hd phone_hd_des">
+                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2504_230)">
+                                            <path
+                                                d="M9.74999 1.25001C9.74999 1.0511 9.82901 0.86033 9.96966 0.719677C10.1103 0.579025 10.3011 0.500008 10.5 0.500008C12.4884 0.502191 14.3948 1.29307 15.8009 2.69912C17.2069 4.10517 17.9978 6.01155 18 8.00001C18 8.19892 17.921 8.38969 17.7803 8.53034C17.6397 8.67099 17.4489 8.75001 17.25 8.75001C17.0511 8.75001 16.8603 8.67099 16.7197 8.53034C16.579 8.38969 16.5 8.19892 16.5 8.00001C16.4982 6.40926 15.8655 4.88417 14.7407 3.75934C13.6158 2.63451 12.0907 2.00179 10.5 2.00001C10.3011 2.00001 10.1103 1.92099 9.96966 1.78034C9.82901 1.63969 9.74999 1.44892 9.74999 1.25001ZM10.5 5.00001C11.2956 5.00001 12.0587 5.31608 12.6213 5.87869C13.1839 6.4413 13.5 7.20436 13.5 8.00001C13.5 8.19892 13.579 8.38969 13.7197 8.53034C13.8603 8.67099 14.0511 8.75001 14.25 8.75001C14.4489 8.75001 14.6397 8.67099 14.7803 8.53034C14.921 8.38969 15 8.19892 15 8.00001C14.9988 6.8069 14.5243 5.663 13.6807 4.81934C12.837 3.97569 11.6931 3.5012 10.5 3.50001C10.3011 3.50001 10.1103 3.57903 9.96966 3.71968C9.82901 3.86033 9.74999 4.0511 9.74999 4.25001C9.74999 4.44892 9.82901 4.63969 9.96966 4.78034C10.1103 4.92099 10.3011 5.00001 10.5 5.00001ZM17.3197 13.0543C17.7544 13.4901 17.9984 14.0805 17.9984 14.696C17.9984 15.3115 17.7544 15.9019 17.3197 16.3378L16.6372 17.1245C10.4947 23.0053 -4.45276 8.06151 1.33724 1.89951L2.19974 1.14951C2.63607 0.727015 3.22119 0.493294 3.82852 0.498909C4.43585 0.504523 5.01655 0.749021 5.44499 1.17951C5.46824 1.20276 6.85799 3.00801 6.85799 3.00801C7.27036 3.44123 7.49992 4.0167 7.49894 4.61481C7.49796 5.21291 7.26653 5.78764 6.85274 6.21951L5.98424 7.31151C6.46488 8.47934 7.17154 9.54069 8.06362 10.4346C8.9557 11.3285 10.0156 12.0373 11.1825 12.5203L12.2812 11.6465C12.7132 11.233 13.2878 11.0019 13.8857 11.001C14.4836 11.0002 15.0589 11.2298 15.492 11.642C15.492 11.642 17.2965 13.031 17.3197 13.0543ZM16.2877 14.1448C16.2877 14.1448 14.493 12.764 14.4697 12.7408C14.3152 12.5876 14.1065 12.5016 13.8889 12.5016C13.6713 12.5016 13.4625 12.5876 13.308 12.7408C13.2877 12.7618 11.775 13.967 11.775 13.967C11.673 14.0482 11.5517 14.1013 11.423 14.1213C11.2942 14.1413 11.1625 14.1274 11.0407 14.081C9.52908 13.5182 8.15604 12.6371 7.01462 11.4973C5.87319 10.3576 4.99004 8.98583 4.42499 7.47501C4.37489 7.3516 4.35855 7.21707 4.37767 7.08526C4.39678 6.95345 4.45065 6.8291 4.53374 6.72501C4.53374 6.72501 5.73899 5.21151 5.75924 5.19201C5.91244 5.0375 5.9984 4.82872 5.9984 4.61113C5.9984 4.39355 5.91244 4.18477 5.75924 4.03026C5.73599 4.00776 4.35524 2.21151 4.35524 2.21151C4.19841 2.07089 3.99374 1.99558 3.78317 2.00102C3.57261 2.00646 3.3721 2.09223 3.22274 2.24076L2.36024 2.99076C-1.87126 8.07876 11.082 20.3135 15.5407 16.1L16.224 15.3125C16.3841 15.1642 16.4803 14.9595 16.4922 14.7415C16.5041 14.5236 16.4308 14.3096 16.2877 14.1448Z"
+                                                fill="#1A1919"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2504_230">
+                                                <rect width="18" height="18" fill="white" transform="translate(0 0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span><a href="tel:024.3577.8977">024 3577 8977</a> / <a href="tel:097.583.0096">097
+                                            583 0096</a></span>
+                                </div>
+                                <div class="menu_hd">
+                                    <div class="menu_hd_ct">
+                                        <nav>
+                                            <ul class="menu">
+                                                <li><a href="#">Tính năng</a></li>
+                                                <li class="business_review_btn"><a href="#">Xây dựng bộ sản phẩm</a>
+                                                </li>
+                                                <li class="diem1"><a href="#" rel="1">Báo giá</a></li>
+                                            </ul>
+                                        </nav>
+                                        <div class="phone_hd phone_hd_mb">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_2504_230)">
+                                                    <path
+                                                        d="M9.74999 1.25001C9.74999 1.0511 9.82901 0.86033 9.96966 0.719677C10.1103 0.579025 10.3011 0.500008 10.5 0.500008C12.4884 0.502191 14.3948 1.29307 15.8009 2.69912C17.2069 4.10517 17.9978 6.01155 18 8.00001C18 8.19892 17.921 8.38969 17.7803 8.53034C17.6397 8.67099 17.4489 8.75001 17.25 8.75001C17.0511 8.75001 16.8603 8.67099 16.7197 8.53034C16.579 8.38969 16.5 8.19892 16.5 8.00001C16.4982 6.40926 15.8655 4.88417 14.7407 3.75934C13.6158 2.63451 12.0907 2.00179 10.5 2.00001C10.3011 2.00001 10.1103 1.92099 9.96966 1.78034C9.82901 1.63969 9.74999 1.44892 9.74999 1.25001ZM10.5 5.00001C11.2956 5.00001 12.0587 5.31608 12.6213 5.87869C13.1839 6.4413 13.5 7.20436 13.5 8.00001C13.5 8.19892 13.579 8.38969 13.7197 8.53034C13.8603 8.67099 14.0511 8.75001 14.25 8.75001C14.4489 8.75001 14.6397 8.67099 14.7803 8.53034C14.921 8.38969 15 8.19892 15 8.00001C14.9988 6.8069 14.5243 5.663 13.6807 4.81934C12.837 3.97569 11.6931 3.5012 10.5 3.50001C10.3011 3.50001 10.1103 3.57903 9.96966 3.71968C9.82901 3.86033 9.74999 4.0511 9.74999 4.25001C9.74999 4.44892 9.82901 4.63969 9.96966 4.78034C10.1103 4.92099 10.3011 5.00001 10.5 5.00001ZM17.3197 13.0543C17.7544 13.4901 17.9984 14.0805 17.9984 14.696C17.9984 15.3115 17.7544 15.9019 17.3197 16.3378L16.6372 17.1245C10.4947 23.0053 -4.45276 8.06151 1.33724 1.89951L2.19974 1.14951C2.63607 0.727015 3.22119 0.493294 3.82852 0.498909C4.43585 0.504523 5.01655 0.749021 5.44499 1.17951C5.46824 1.20276 6.85799 3.00801 6.85799 3.00801C7.27036 3.44123 7.49992 4.0167 7.49894 4.61481C7.49796 5.21291 7.26653 5.78764 6.85274 6.21951L5.98424 7.31151C6.46488 8.47934 7.17154 9.54069 8.06362 10.4346C8.9557 11.3285 10.0156 12.0373 11.1825 12.5203L12.2812 11.6465C12.7132 11.233 13.2878 11.0019 13.8857 11.001C14.4836 11.0002 15.0589 11.2298 15.492 11.642C15.492 11.642 17.2965 13.031 17.3197 13.0543ZM16.2877 14.1448C16.2877 14.1448 14.493 12.764 14.4697 12.7408C14.3152 12.5876 14.1065 12.5016 13.8889 12.5016C13.6713 12.5016 13.4625 12.5876 13.308 12.7408C13.2877 12.7618 11.775 13.967 11.775 13.967C11.673 14.0482 11.5517 14.1013 11.423 14.1213C11.2942 14.1413 11.1625 14.1274 11.0407 14.081C9.52908 13.5182 8.15604 12.6371 7.01462 11.4973C5.87319 10.3576 4.99004 8.98583 4.42499 7.47501C4.37489 7.3516 4.35855 7.21707 4.37767 7.08526C4.39678 6.95345 4.45065 6.8291 4.53374 6.72501C4.53374 6.72501 5.73899 5.21151 5.75924 5.19201C5.91244 5.0375 5.9984 4.82872 5.9984 4.61113C5.9984 4.39355 5.91244 4.18477 5.75924 4.03026C5.73599 4.00776 4.35524 2.21151 4.35524 2.21151C4.19841 2.07089 3.99374 1.99558 3.78317 2.00102C3.57261 2.00646 3.3721 2.09223 3.22274 2.24076L2.36024 2.99076C-1.87126 8.07876 11.082 20.3135 15.5407 16.1L16.224 15.3125C16.3841 15.1642 16.4803 14.9595 16.4922 14.7415C16.5041 14.5236 16.4308 14.3096 16.2877 14.1448Z"
+                                                        fill="#1A1919"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_2504_230">
+                                                        <rect width="18" height="18" fill="white"
+                                                            transform="translate(0 0.5)"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span><a href="tel:024.3577.8977">024 3577 8977</a> / <a
+                                                    href="tel:097.583.0096">097 583 0096</a></span>
+                                        </div>
+                                    </div>
+                                    <div class="omnicare_icon_click">
+                                        <div class="omicare_menu_icon">
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <strong>Menu</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="omnicare_banner">
+                    <div class="container">
+                        <div class="banner_general">
+                            <div class="text_widget wow  fadeInLeft animated" data-wow-delay="0.3s"
+                                data-wow-duration="1s"
+                                style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                <span class="omnicare_orange banner_hashtag">#Lựa chọn hàng đầu của doanh nghiệp</span>
+                                <h2>Dẫn dắt <p></p> trải nghiệm <p></p> Khách hàng</h2>
+                                <ul>
+                                    <li>Hiểu rõ khách hàng - Kết nối cảm xúc</li>
+                                    <li>Giảm chi phí tiếp thị - Tăng doanh số bán hàng</li>
+                                    <li>Dự đoán hành vi - Khuyến nghị hành động</li>
+                                </ul>
+                                <div class="banner_btn">
+                                    <a href="#" class="qb_btn demo_btn">Video demo <svg width="12" height="11"
+                                            viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 1H10.5M10.5 1V9M10.5 1L1.5 10" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg></a>
+                                    <a href="#" class="advise_btn">Tư vấn <svg width="12" height="11"
+                                            viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 1H10.5M10.5 1V9M10.5 1L1.5 10" stroke="#484747"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="wrap_figure wow  fadeInRight animated" data-wow-delay="0.3s"
+                                data-wow-duration="1s"
+                                style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInRight;">
+                                <figure><img
+                                        src="{{asset "images/banner-img1.png"}}">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- json_bg -->
+        </header>
+        <div class="omnicare_partner">
+            <div class="container">
+                <div class="partner_general">
+                    <div class="ct_left">
+                        <span>
+                            <p class="omnicare_orange">500+</p> Doanh nghiệp đã tin cậy và ứng dụng OmniCare
+                        </span>
+                    </div>
+                    <div class="ct_right">
+                        <div class="qbx_slogan">
+                            <div class="marquee">
+                                <div style="width: 100000px; transform: translateX(0px); animation: 9.89984s linear 0s infinite normal none running marqueeAnimation-70359750;"
+                                    class="js-marquee-wrapper">
+                                    <div class="js-marquee" style="margin-right: 50px; float: left;">
+                                        <ul>
+                                            <li><img
+                                                    src="{{asset "images/media-care.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/sakura.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/sua-ba-vi.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/bibo-mart.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/biluxury.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/pharmacity.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/media-mart.png"}}">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="js-marquee" style="margin-right: 50px; float: left;">
+                                        <ul>
+                                            <li><img
+                                                    src="{{asset "images/media-care.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/sakura.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/sua-ba-vi.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/bibo-mart.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/biluxury.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/pharmacity.png"}}">
+                                            </li>
+                                            <li><img
+                                                    src="{{asset "images/media-mart.png"}}">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- qbx_slogan -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_partner -->
+        <div class="omnicare_understand wow  fadeInUp animated" data-wow-delay="0.3s" data-wow-duration="1s"
+            style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="container">
+                <div class="omnicare_title understand_title_des">
+                    <h2>Thấu hiểu khách hàng <p></p> bằng Dữ liệu và AI</h2>
+                </div>
+                <div class="understand_general">
+                    <div class="ct_left">
+                        <ul class="sli_understand_figure slick-initialized slick-slider slick-dotted">
+                            <div class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 1908px;">
+                                    <div class="slick-slide" data-slick-index="0" aria-hidden="true"
+                                        style="width: 636px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 300ms ease 0s;"
+                                        role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00"
+                                        tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/thauhieu-img1.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="1" aria-hidden="true"
+                                        style="width: 636px; position: relative; left: -636px; top: 0px; z-index: 998; opacity: 0; transition: opacity 300ms ease 0s;"
+                                        role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01"
+                                        tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/thauhieu-img2.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-current slick-active" data-slick-index="2"
+                                        aria-hidden="false"
+                                        style="width: 636px; position: relative; left: -1272px; top: 0px; z-index: 999; opacity: 1;"
+                                        role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/thauhieu-img3.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="slick-dots" style="" role="tablist">
+                                <li class="" role="presentation"><button type="button" role="tab"
+                                        id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3"
+                                        tabindex="-1">1</button></li>
+                                <li role="presentation" class=""><button type="button" role="tab"
+                                        id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3"
+                                        tabindex="-1">2</button></li>
+                                <li role="presentation" class="slick-active"><button type="button" role="tab"
+                                        id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3"
+                                        tabindex="0" aria-selected="true">3</button></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="ct_right">
+                        <div class="omnicare_title understand_title_mb">
+                            <h2>Thấu hiểu khách hàng <p></p> bằng Dữ liệu và AI</h2>
+                        </div>
+                        <ul class="sli_understand_widget slick-vertical slick-initialized slick-slider">
+                            <div class="slick-list draggable" style="height: 348px;">
+                                <div class="slick-track"
+                                    style="opacity: 1; height: 348px; transform: translate3d(0px, -116px, 0px);">
+                                    <div class="slick-slide slick-active" data-slick-index="0" aria-hidden="false"
+                                        style="width: 566px;" tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <div class="botton_line_ver2">
+                                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                        <g clip-path="url(#clip0_2143_10521)">
+                                                            <path
+                                                                d="M24.3085 14.6082C23.9003 12.8574 22.8632 11.3175 21.3942 10.2811C19.9251 9.24477 18.1266 8.78413 16.3403 8.98674C14.5539 9.18934 12.9043 10.0411 11.7047 11.3801C10.5051 12.7192 9.83916 14.4522 9.83343 16.25C9.83253 17.4218 10.1156 18.5765 10.6584 19.6151C9.66946 20.145 8.88596 20.9903 8.43241 22.0165C7.97886 23.0428 7.88128 24.1912 8.15517 25.2793C8.42906 26.3673 9.05871 27.3327 9.94408 28.0219C10.8294 28.7111 11.9197 29.0847 13.0418 29.0833H22.6668C24.4645 29.0776 26.1976 28.4117 27.5366 27.2121C28.8757 26.0125 29.7274 24.3628 29.93 22.5765C30.1326 20.7901 29.672 18.9916 28.6356 17.5226C27.5992 16.0536 26.0593 15.0164 24.3085 14.6082ZM20.662 25.5276C20.1463 26.0431 19.447 26.3327 18.7178 26.3327C17.9886 26.3327 17.2892 26.0431 16.7735 25.5276L13.6715 22.4256L14.9668 21.1294L18.0688 24.2314C18.2433 24.3983 18.4754 24.4914 18.7168 24.4914C18.9583 24.4914 19.1904 24.3983 19.3649 24.2314L24.5478 19.0486L25.8439 20.3447L20.662 25.5276Z"
+                                                                fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2143_10521">
+                                                                <rect width="22" height="22" fill="white"
+                                                                    transform="translate(8 8)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="understand_detailds">
+                                                        <strong>Hợp nhất dữ liệu khách hàng</strong>
+                                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet
+                                                            semper cras ultrices sed mauris. Eu tortor enim tempor
+                                                            tellus in.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                        style="width: 566px;" tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <div class="botton_line_ver2">
+                                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                        <g clip-path="url(#clip0_2143_10528)">
+                                                            <path
+                                                                d="M20.8333 29.0833C20.8333 29.3264 20.7368 29.5596 20.5648 29.7315C20.3929 29.9034 20.1598 30 19.9167 30H8.91667C8.67355 30 8.44039 29.9034 8.26849 29.7315C8.09658 29.5596 8 29.3264 8 29.0833C8 27.3815 8.67604 25.7494 9.8794 24.5461C11.0828 23.3427 12.7149 22.6667 14.4167 22.6667C16.1185 22.6667 17.7506 23.3427 18.9539 24.5461C20.1573 25.7494 20.8333 27.3815 20.8333 29.0833ZM14.4167 13.5C13.4442 13.5 12.5116 13.8863 11.8239 14.5739C11.1363 15.2616 10.75 16.1942 10.75 17.1667C10.75 18.1391 11.1363 19.0718 11.8239 19.7594C12.5116 20.447 13.4442 20.8333 14.4167 20.8333C15.3891 20.8333 16.3218 20.447 17.0094 19.7594C17.697 19.0718 18.0833 18.1391 18.0833 17.1667C18.0833 16.1942 17.697 15.2616 17.0094 14.5739C16.3218 13.8863 15.3891 13.5 14.4167 13.5ZM30 12.5833V19.9167C30 20.5186 29.8814 21.1146 29.6511 21.6706C29.4208 22.2267 29.0832 22.732 28.6576 23.1576C28.232 23.5832 27.7267 23.9208 27.1706 24.1511C26.6146 24.3814 26.0186 24.5 25.4167 24.5H21.2678C20.3964 23.2026 19.1766 22.1773 17.7488 21.5419C18.86 20.6962 19.6079 19.4594 19.8408 18.0824C20.0736 16.7055 19.774 15.2915 19.0027 14.1274C18.2313 12.9633 17.046 12.1361 15.6872 11.8138C14.3285 11.4915 12.898 11.6981 11.6859 12.3917C11.7886 9.95525 13.7888 8 16.25 8H25.4167C26.0186 8 26.6146 8.11855 27.1706 8.34889C27.7267 8.57922 28.232 8.91683 28.6576 9.34243C29.0832 9.76803 29.4208 10.2733 29.6511 10.8294C29.8814 11.3854 30 11.9814 30 12.5833ZM26.3333 21.75C26.3333 21.5069 26.2368 21.2737 26.0648 21.1018C25.8929 20.9299 25.6598 20.8333 25.4167 20.8333H22.2083C21.9652 20.8333 21.7321 20.9299 21.5602 21.1018C21.3882 21.2737 21.2917 21.5069 21.2917 21.75C21.2917 21.9931 21.3882 22.2263 21.5602 22.3982C21.7321 22.5701 21.9652 22.6667 22.2083 22.6667H25.4167C25.6598 22.6667 25.8929 22.5701 26.0648 22.3982C26.2368 22.2263 26.3333 21.9931 26.3333 21.75Z"
+                                                                fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2143_10528">
+                                                                <rect width="22" height="22" fill="white"
+                                                                    transform="translate(8 8)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <div class="understand_detailds">
+                                                        <strong>Toàn cảnh về khách hàng</strong>
+                                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet
+                                                            semper cras ultrices sed mauris. Eu tortor enim tempor
+                                                            tellus in.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-current slick-active" data-slick-index="2"
+                                        aria-hidden="false" style="width: 566px;">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <div class="botton_line_ver2">
+                                                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                        <g clip-path="url(#clip0_2143_10536)">
+                                                            <path
+                                                                d="M29.9083 14.4166H8V13.5C8 10.97 10.0533 8.91663 12.5833 8.91663H14.9025C15.3242 8.91663 15.755 9.01746 16.1308 9.20996L19.0275 10.6583C19.1558 10.7225 19.2933 10.7591 19.44 10.7591H25.4258C27.635 10.7591 29.4867 12.3358 29.9175 14.4258L29.9083 14.4166ZM30 16.25V24.5C30 27.03 27.9467 29.0833 25.4167 29.0833H12.5833C10.0533 29.0833 8 27.03 8 24.5V16.25H30ZM22.2267 26.0675L23.7025 24.5916C24.2342 24.06 24.5 23.3633 24.5 22.6758C24.5 21.9883 24.2342 21.2825 23.7025 20.76L22.2267 19.2841C22.1418 19.1993 22.041 19.1319 21.9302 19.086C21.8193 19.0401 21.7004 19.0164 21.5804 19.0164C21.4604 19.0164 21.3416 19.0401 21.2307 19.086C21.1198 19.1319 21.019 19.1993 20.9342 19.2841C20.8493 19.369 20.782 19.4697 20.7361 19.5806C20.6901 19.6915 20.6665 19.8104 20.6665 19.9304C20.6665 20.0504 20.6901 20.1692 20.7361 20.2801C20.782 20.391 20.8493 20.4918 20.9342 20.5766L22.1167 21.7591H14.4167C13.9125 21.7591 13.5 22.1716 13.5 22.6758C13.5 23.18 13.9125 23.5925 14.4167 23.5925H22.1167L20.9342 24.775C20.8493 24.8598 20.782 24.9606 20.7361 25.0715C20.6901 25.1823 20.6665 25.3012 20.6665 25.4212C20.6665 25.5412 20.6901 25.6601 20.7361 25.771C20.782 25.8818 20.8493 25.9826 20.9342 26.0675C21.019 26.1523 21.1198 26.2196 21.2307 26.2656C21.3416 26.3115 21.4604 26.3351 21.5804 26.3351C21.7004 26.3351 21.8193 26.3115 21.9302 26.2656C22.041 26.2196 22.1418 26.1523 22.2267 26.0675Z"
+                                                                fill="white"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_2143_10536">
+                                                                <rect width="22" height="22" fill="white"
+                                                                    transform="translate(8 8)"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+
+                                                    <div class="understand_detailds">
+                                                        <strong>Đào sâu dữ liệu</strong>
+                                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet
+                                                            semper cras ultrices sed mauris. Eu tortor enim tempor
+                                                            tellus in.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_understand -->
+        <div class="omnicare_cost wow animated fadeInDown" data-wow-delay="0.3s" data-wow-duration="1s"
+            style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+            <div class="container">
+                <div class="omnicare_title understand_title_des">
+                    <h2>Giảm chi phí Marketing - <p></p> Tăng tỉ lệ chuyển đổi</h2>
+                </div>
+                <div class="understand_general">
+                    <div class="ct_right">
+                        <div class="omnicare_title understand_title_mb">
+                            <h2>Giảm chi phí Marketing - <p></p> Tăng tỉ lệ chuyển đổi</h2>
+                        </div>
+                        <div class="list_tab_widget">
+                            <ul class="sli_understand_widget slick-vertical slick-initialized slick-slider">
+                                <div class="slick-list draggable" style="height: 348px;">
+                                    <div class="slick-track"
+                                        style="opacity: 1; height: 348px; transform: translate3d(0px, -116px, 0px);">
+                                        <div class="slick-slide slick-active" data-slick-index="0" aria-hidden="false"
+                                            style="width: 566px;" tabindex="-1">
+                                            <div>
+                                                <li style="width: 100%; display: inline-block;">
+                                                    <div class="botton_line_ver2">
+                                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                            <path
+                                                                d="M26.8242 19.7443H25.1228C25.2962 20.2191 25.391 20.7315 25.391 21.2655V27.6958C25.391 27.9185 25.3522 28.1322 25.2817 28.331H28.0945C29.1452 28.331 30 27.4762 30 26.4255V22.9201C30 21.169 28.5754 19.7443 26.8242 19.7443ZM12.6091 21.2656C12.6091 20.7315 12.7038 20.2191 12.8772 19.7443H11.1758C9.42467 19.7443 8 21.169 8 22.9201V26.4256C8 27.4763 8.85478 28.3311 9.9055 28.3311H12.7183C12.6459 28.1271 12.609 27.9123 12.6091 27.6959V21.2656ZM20.9448 18.0898H17.0552C15.3041 18.0898 13.8794 19.5144 13.8794 21.2656V27.6959C13.8794 28.0466 14.1638 28.331 14.5145 28.331H23.4855C23.8363 28.331 24.1207 28.0467 24.1207 27.6959V21.2656C24.1207 19.5144 22.696 18.0898 20.9448 18.0898ZM19 9.66895C16.894 9.66895 15.1807 11.3823 15.1807 13.4883C15.1807 14.9168 15.9691 16.1644 17.1335 16.8194C17.6858 17.1301 18.3225 17.3076 19 17.3076C19.6776 17.3076 20.3143 17.1301 20.8665 16.8194C22.031 16.1644 22.8193 14.9168 22.8193 13.4883C22.8193 11.3823 21.106 9.66895 19 9.66895ZM12.2934 13.2289C10.7183 13.2289 9.43701 14.5102 9.43701 16.0852C9.43701 17.6602 10.7183 18.9416 12.2934 18.9416C12.6804 18.9419 13.0634 18.8631 13.4189 18.7101C14.0165 18.4528 14.5091 17.9974 14.814 17.427C15.0348 17.0143 15.1502 16.5533 15.1497 16.0852C15.1497 14.5102 13.8684 13.2289 12.2934 13.2289ZM25.7067 13.2289C24.1317 13.2289 22.8503 14.5102 22.8503 16.0852C22.8499 16.5533 22.9652 17.0143 23.186 17.427C23.4909 17.9975 23.9836 18.4528 24.5811 18.7101C24.9366 18.8631 25.3196 18.9419 25.7067 18.9416C27.2817 18.9416 28.563 17.6602 28.563 16.0852C28.563 14.5102 27.2817 13.2289 25.7067 13.2289Z"
+                                                                fill="white"></path>
+                                                        </svg>
+                                                        <div class="understand_detailds">
+                                                            <strong>Phân tệp khách hàng tự động / bán tự động / thủ
+                                                                công; đưa vào các chiến dịch hoặc các phần mềm chạy
+                                                                marketing</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                                            style="width: 566px;" tabindex="-1">
+                                            <div>
+                                                <li style="width: 100%; display: inline-block;">
+                                                    <div class="botton_line_ver2">
+                                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                            <g clip-path="url(#clip0_2143_806)">
+                                                                <path
+                                                                    d="M29.3951 19.8838H21.7705C21.4372 19.8838 21.1656 20.1555 21.1656 20.4886C21.1656 20.6583 21.2377 20.8112 21.3502 20.9215L26.7191 26.2904C26.7758 26.3513 26.8444 26.4 26.9208 26.4332C26.9971 26.4664 27.0795 26.4836 27.1627 26.4836C27.2621 26.4838 27.3599 26.4595 27.4476 26.4129C27.5354 26.3662 27.6102 26.2986 27.6656 26.2162C28.9856 24.684 29.8344 22.738 29.9873 20.5968C29.9957 20.5613 29.9999 20.525 30 20.4886C30 20.4091 29.9844 20.3305 29.954 20.2571C29.9236 20.1837 29.879 20.117 29.8229 20.0609C29.7667 20.0047 29.7 19.9602 29.6266 19.9298C29.5532 19.8994 29.4745 19.8838 29.3951 19.8838ZM19.4679 8.9231C19.1347 8.92513 18.8652 9.19473 18.8652 9.52788V18.0015C18.8652 18.3368 19.1347 18.6084 19.4679 18.6084H27.9437C28.2769 18.6084 28.5484 18.3368 28.5484 18.0015C28.2492 13.1249 24.3466 9.22236 19.4679 8.9231Z"
+                                                                    fill="white"></path>
+                                                                <path
+                                                                    d="M24.1259 25.7961L17.8742 19.5444C17.7682 19.4361 17.7045 19.2854 17.7045 19.122L17.7023 10.2919C17.7023 10.2127 17.6868 10.1343 17.6565 10.0612C17.6263 9.98805 17.5819 9.92158 17.5259 9.86561C17.4699 9.80964 17.4035 9.76524 17.3303 9.73498C17.2572 9.70471 17.1788 9.68916 17.0996 9.68921C12.0214 9.99907 8 14.2178 8 19.3725C8 24.7308 12.344 29.0769 17.7023 29.0769C20.147 29.0769 22.3794 28.1729 24.0856 26.681C24.1529 26.6246 24.207 26.5541 24.244 26.4746C24.2811 26.395 24.3002 26.3083 24.3 26.2205C24.2998 26.0617 24.2373 25.9092 24.1259 25.7961Z"
+                                                                    fill="white"></path>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_2143_806">
+                                                                    <rect width="22" height="22" fill="white"
+                                                                        transform="translate(8 8)"></rect>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                        <div class="understand_detailds">
+                                                            <strong>Theo dõi, thống kê, quản lý hiệu quả chiến
+                                                                dịch</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide slick-current slick-active" data-slick-index="2"
+                                            aria-hidden="false" style="width: 566px;">
+                                            <div>
+                                                <li style="width: 100%; display: inline-block;">
+                                                    <div class="botton_line_ver2">
+                                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="38" height="38" rx="19" fill="#8D8C8C"></rect>
+                                                            <g clip-path="url(#clip0_2143_814)">
+                                                                <path
+                                                                    d="M14.4883 24.2073V25.7536L12.3444 26.9446C12.0492 26.7059 11.674 26.5625 11.2656 26.5625C10.3179 26.5625 9.54688 27.3335 9.54688 28.2812C9.54688 29.229 10.3179 30 11.2656 30C12.2133 30 12.9844 29.229 12.9844 28.2812C12.9844 28.2101 12.9795 28.14 12.9711 28.0711L15.4458 26.6962C15.5463 26.6404 15.63 26.5587 15.6883 26.4597C15.7466 26.3606 15.7773 26.2478 15.7773 26.1328V23.748L15.4706 23.9321C15.1737 24.1101 14.8345 24.2052 14.4883 24.2073ZM19.6445 26.6884V25.6172H18.3555V26.6884C17.7263 26.9439 17.2812 27.5614 17.2812 28.2812C17.2812 29.229 18.0523 30 19 30C19.9477 30 20.7188 29.229 20.7188 28.2812C20.7188 27.5614 20.2738 26.9439 19.6445 26.6884ZM26.7344 26.5625C26.326 26.5625 25.9508 26.7059 25.6556 26.9446L23.5117 25.7536V24.2073C23.1656 24.2051 22.8263 24.1101 22.5294 23.9321L22.2227 23.748V26.1328C22.2227 26.2478 22.2534 26.3606 22.3117 26.4597C22.37 26.5587 22.4537 26.6404 22.5542 26.6962L25.0289 28.0711C25.0202 28.1408 25.0158 28.211 25.0156 28.2812C25.0156 29.229 25.7867 30 26.7344 30C27.6821 30 28.4531 29.229 28.4531 28.2812C28.4531 27.3335 27.6821 26.5625 26.7344 26.5625ZM23.98 22.7298L25.5658 21.144C25.6674 21.0424 25.7321 20.9097 25.7497 20.767C25.7673 20.6243 25.7366 20.4799 25.6627 20.3567L25.0737 19.3749C25.274 18.9958 25.4381 18.5986 25.564 18.1886L26.6759 17.9107C26.8153 17.8758 26.9391 17.7953 27.0276 17.682C27.116 17.5687 27.1641 17.4291 27.1641 17.2854V15.0428C27.1641 14.899 27.116 14.7594 27.0276 14.6461C26.9391 14.5328 26.8153 14.4523 26.6759 14.4175L25.564 14.1395C25.4381 13.7296 25.2739 13.3323 25.0737 12.9531L25.6627 11.9714C25.7366 11.8482 25.7673 11.7037 25.7497 11.5611C25.7321 11.4184 25.6674 11.2857 25.5658 11.1841L23.98 9.59831C23.8784 9.49667 23.7457 9.43192 23.603 9.41435C23.4604 9.39679 23.3159 9.42742 23.1927 9.50137L22.2109 10.0904C21.8317 9.8901 21.4345 9.72594 21.0246 9.60007L20.7466 8.48821C20.7118 8.34876 20.6313 8.22497 20.518 8.13651C20.4047 8.04805 20.2651 8 20.1213 8H17.8787C17.7349 7.99999 17.5953 8.04804 17.482 8.1365C17.3687 8.22496 17.2883 8.34876 17.2534 8.48821L16.9754 9.60007C16.5655 9.72594 16.1683 9.89011 15.7892 10.0904L14.8074 9.50137C14.6841 9.42742 14.5397 9.3968 14.397 9.41436C14.2544 9.43192 14.1217 9.49667 14.0201 9.59831L12.4343 11.1841C12.3326 11.2857 12.2679 11.4184 12.2503 11.5611C12.2328 11.7037 12.2634 11.8482 12.3374 11.9714L12.9264 12.9531C12.7261 13.3323 12.5619 13.7295 12.4361 14.1395L11.3242 14.4175C11.1847 14.4523 11.0609 14.5328 10.9725 14.6461C10.884 14.7594 10.8359 14.899 10.8359 15.0428V17.2854C10.8359 17.4291 10.884 17.5687 10.9724 17.682C11.0609 17.7953 11.1847 17.8758 11.3241 17.9107L12.436 18.1886C12.5619 18.5986 12.726 18.9957 12.9263 19.3749L12.3373 20.3567C12.2634 20.4799 12.2327 20.6243 12.2503 20.767C12.2679 20.9097 12.3326 21.0424 12.4342 21.144L14.02 22.7298C14.1216 22.8315 14.2543 22.8962 14.397 22.9138C14.5397 22.9313 14.6841 22.9007 14.8074 22.8268L15.7891 22.2377C16.1683 22.438 16.5655 22.6022 16.9754 22.7281L17.2534 23.84C17.2882 23.9794 17.3687 24.1032 17.482 24.1917C17.5953 24.2801 17.7349 24.3282 17.8786 24.3282H20.1213C20.265 24.3282 20.4046 24.2801 20.5179 24.1917C20.6312 24.1032 20.7117 23.9794 20.7466 23.84L21.0245 22.7281C21.4345 22.6022 21.8317 22.438 22.2108 22.2377L23.1925 22.8268C23.3158 22.9007 23.4603 22.9313 23.6029 22.9138C23.7456 22.8962 23.8783 22.8315 23.98 22.7298ZM19 19.1719C17.3388 19.1719 15.9922 17.8252 15.9922 16.1641C15.9922 14.5029 17.3388 13.1562 19 13.1562C20.6612 13.1562 22.0078 14.5029 22.0078 16.1641C22.0078 17.8252 20.6612 19.1719 19 19.1719Z"
+                                                                    fill="white"></path>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_2143_814">
+                                                                    <rect width="22" height="22" fill="white"
+                                                                        transform="translate(8 8)"></rect>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+
+                                                        <div class="understand_detailds">
+                                                            <strong>Công cụ xây dựng hành trình khách hàng (Journey
+                                                                Builder), Tự động hóa marketing</strong>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ct_left">
+                        <ul class="sli_understand_figure slick-initialized slick-slider slick-dotted">
+                            <div class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 1908px;">
+                                    <div class="slick-slide" data-slick-index="0" aria-hidden="true"
+                                        style="width: 636px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 300ms ease 0s;"
+                                        role="tabpanel" id="slick-slide20" aria-describedby="slick-slide-control20"
+                                        tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/giamchiphi-img1.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide" data-slick-index="1" aria-hidden="true"
+                                        style="width: 636px; position: relative; left: -636px; top: 0px; z-index: 998; opacity: 0; transition: opacity 300ms ease 0s;"
+                                        role="tabpanel" id="slick-slide21" aria-describedby="slick-slide-control21"
+                                        tabindex="-1">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/giamchiphi-img2.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="slick-slide slick-current slick-active" data-slick-index="2"
+                                        aria-hidden="false"
+                                        style="width: 636px; position: relative; left: -1272px; top: 0px; z-index: 999; opacity: 1;"
+                                        role="tabpanel" id="slick-slide22" aria-describedby="slick-slide-control22">
+                                        <div>
+                                            <li style="width: 100%; display: inline-block;">
+                                                <figure><img
+                                                        src="{{asset "images/giamchiphi-img1.png"}}">
+                                                </figure>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="slick-dots" style="" role="tablist">
+                                <li class="" role="presentation"><button type="button" role="tab"
+                                        id="slick-slide-control20" aria-controls="slick-slide20" aria-label="1 of 3"
+                                        tabindex="-1">1</button></li>
+                                <li role="presentation" class=""><button type="button" role="tab"
+                                        id="slick-slide-control21" aria-controls="slick-slide21" aria-label="2 of 3"
+                                        tabindex="-1">2</button></li>
+                                <li role="presentation" class="slick-active"><button type="button" role="tab"
+                                        id="slick-slide-control22" aria-controls="slick-slide22" aria-label="3 of 3"
+                                        tabindex="0" aria-selected="true">3</button></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_cost -->
+        <div class="omnicare_three_bg">
+            <div class="omnicare_shorten wow animated zoomIn" data-wow-delay="0.3s" data-wow-duration="1s"
+                style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+                <div class="container">
+                    <div class="omnicare_title">
+                        <h2>Rút ngắn thời gian bán hàng <p></p> -Tăng tỉ lệ chốt đơn hàng</h2>
+                    </div>
+                    <div class="shorten_general row">
+                        <div class="shorten_detailds col-sm-6">
+                            <div class="shorten_ct">
+                                <div class="wrap_figure">
+                                    <figure><img
+                                            src="{{asset "images/rutngan-img1.png"}}">
+                                    </figure>
+                                </div>
+                                <div class="text_widget">
+                                    <strong>Phân tích dữ liệu để hiểu động cơ ra quyết định của khách hàng và đưa ra các
+                                        gợi ý giúp tư vấn, chốt đơn</strong>
+                                    <span>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                        sed mauris. Eu tortor enim tempor tellus in. </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shorten_detailds col-sm-3">
+                            <div class="shorten_ct">
+                                <div class="wrap_figure">
+                                    <figure><img
+                                            src="{{asset "images/rutngan-img2.png"}}">
+                                    </figure>
+                                </div>
+                                <div class="text_widget">
+                                    <strong>Theo dõi quá trình chuyển đổi từ tiềm năng thành cơ hội</strong>
+                                    <span>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                        sed mauris. Eu tortor enim tempor tellus in. </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shorten_detailds col-sm-3">
+                            <div class="shorten_ct">
+                                <div class="wrap_figure">
+                                    <figure><img
+                                            src="{{asset "images/rutngan-img3.png"}}">
+                                    </figure>
+                                </div>
+                                <div class="text_widget">
+                                    <strong>Hỗ trợ quản lý xuất nhập tồn, quản lý báo giá</strong>
+                                    <span>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                        sed mauris. Eu tortor enim tempor tellus in. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- omnicare_shorten -->
+            <div class="omnicare_takecare wow animated fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s"
+                style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+                <div class="container">
+                    <div class="omnicare_title">
+                        <h2>Chăm sóc thảnh thơi - Gắn kết <p></p> khách hàng với thương hiệu</h2>
+                    </div>
+                    <div class="takecare_general">
+                        <div class="ct_left">
+                            <strong>Khách hàng tự phục vụ</strong>
+                            <ul>
+                                <li>Đặt lịch, đặt trước sản phẩm / dịch vụ</li>
+                                <li>Tương tác với Chat bot để tự giải quyết vấn đề</li>
+                                <li>Tra cứu thông tin liên quan tới hàng hóa</li>
+                                <li>Tra cứu kho kiến thức</li>
+                                <li>Gửi yêu cầu / phản ánh cần hỗ trợ</li>
+                            </ul>
+                        </div>
+                        <div class="ct_right">
+                            <figure><img
+                                    src="{{asset "images/chamsoc-img1.png"}}">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- omnicare_takecare -->
+            <div class="omnicare_faq wow animated fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s"
+                style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+                <div class="container">
+                    <div class="omnicare_title understand_title_des">
+                        <h2>Củng cố lòng trung thành <p></p> với thương hiệu</h2>
+                    </div>
+                    <div class="faq_general">
+                        <div class="ct_left">
+                            <figure><img
+                                    src="{{asset "images/cungco-img1.png"}}">
+                            </figure>
+                        </div>
+                        <div class="ct_right">
+                            <div class="omnicare_title understand_title_mb">
+                                <h2>Củng cố lòng trung thành <p></p> với thương hiệu</h2>
+                            </div>
+                            <div class="faq_bg">
+                                <div class="qb_faq_detailds omnicare_current">
+                                    <div class="qb_faq_info">
+                                        <strong>Tích điểm</strong>
+                                    </div>
+                                    <div class="tg_textwidget">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                            sed mauris. Eu tortor enim tempor tellus in. </p>
+                                    </div>
+                                </div>
+                                <div class="qb_faq_detailds">
+                                    <div class="qb_faq_info">
+                                        <strong>Nhận mã quà tặng</strong>
+                                    </div>
+                                    <div class="tg_textwidget" style="display: none;">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                            sed mauris. Eu tortor enim tempor tellus in. </p>
+                                    </div>
+                                </div>
+                                <div class="qb_faq_detailds">
+                                    <div class="qb_faq_info">
+                                        <strong>Khảo sát</strong>
+                                    </div>
+                                    <div class="tg_textwidget" style="display: none;">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                            sed mauris. Eu tortor enim tempor tellus in. </p>
+                                    </div>
+                                </div>
+                                <div class="qb_faq_detailds">
+                                    <div class="qb_faq_info">
+                                        <strong>Phát hành campaign</strong>
+                                    </div>
+                                    <div class="tg_textwidget" style="display: none;">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                            sed mauris. Eu tortor enim tempor tellus in. </p>
+                                    </div>
+                                </div>
+                                <div class="qb_faq_detailds">
+                                    <div class="qb_faq_info">
+                                        <strong>Tích hợp Zalo</strong>
+                                    </div>
+                                    <div class="tg_textwidget" style="display: none;">
+                                        <p>Lorem ipsum dolor sit amet consectetur. Vitae nisl amet semper cras ultrices
+                                            sed mauris. Eu tortor enim tempor tellus in. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- omnicare_faq -->
+        </div><!-- omnicare_three_bg -->
+        <div class="omnicare_manage wow animated fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s"
+            style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+            <div class="container">
+                <div class="omnicare_title">
+                    <h2>Quản lý mượt mà - Vận hành hiệu quả</h2>
+                </div>
+                <div class="manage_general">
+                    <div class="manage_detailds">
+                        <div class="manage_ct">
+                            <div class="wrap_figure">
+                                <figure><img
+                                        src="{{asset "images/quanly-img1.png"}}">
+                                </figure>
+                            </div>
+                            <div class="text_widget">
+                                <strong>Quản lý tương tác nội bộ</strong>
+                                <div class="manage_inside">
+                                    <ul>
+                                        <li>Tạo công việc</li>
+                                        <li>Đặt thời hạn, mức độ ưu tiên</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Giao việc</li>
+                                        <li>SLA</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="manage_detailds">
+                        <div class="manage_ct">
+                            <div class="wrap_figure">
+                                <figure><img
+                                        src="{{asset "images/quanly-img2.png"}}">
+                                </figure>
+                            </div>
+                            <div class="text_widget">
+                                <strong>Lịch hoạt động</strong>
+                                <div class="manage_inside">
+                                    <ul>
+                                        <li>Lịch phân công công việc</li>
+                                        <li>Lịch tương tác với khách hàng</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_manage -->
+        <div class="omnicare_news wow animated fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s"
+            style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+            <div class="container">
+                <div class="omnicare_title">
+                    <h2>Tin tức - Sự kiện</h2>
+                </div>
+                <div class="news_general">
+                    <div class="ct_left">
+                        <div class="wrap_figure">
+                            <figure><a href="#"><img
+                                        src="{{asset "images/tintuc-img1.jpg"}}"></a>
+                            </figure>
+                        </div>
+                        <div class="text_widget">
+                            <span class="omnicare_date">25 tháng 10 2023</span>
+                            <h3><a href="#">GMO-Z.com RUNSYSTEM được vinh danh trong trang vàng giải pháp của Bộ Kế
+                                    hoạch và Đầu tư</a></h3>
+                        </div>
+                    </div>
+                    <div class="ct_right">
+                        <div class="news_detailds">
+                            <div class="text_widget">
+                                <span class="omnicare_date">25 tháng 10 2023</span>
+                                <h3><a href="#">Đón đoàn làm việc của Ngân hàng BIDV và Hana Bank (Hàn Quốc) tại
+                                        GMO-Z.com RUNSYSTEM</a></h3>
+                            </div>
+                            <div class="wrap_figure">
+                                <figure><a href="#"><img
+                                            src="{{asset "images/tintuc-img2.jpg"}}"></a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="news_detailds">
+                            <div class="text_widget">
+                                <span class="omnicare_date">25 tháng 10 2023</span>
+                                <h3><a href="#">GMO-Z.com RUNSYSTEM và HTC-ITC ký kết thỏa thuận hợp tác toàn diện</a>
+                                </h3>
+                            </div>
+                            <div class="wrap_figure">
+                                <figure><img
+                                        src="{{asset "images/tintuc-img3.jpg"}}">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="news_detailds">
+                            <div class="text_widget">
+                                <span class="omnicare_date">25 tháng 10 2023</span>
+                                <h3><a href="#">GMO-Z.com RUNSYSTEM được vinh danh trong trang vàng giải pháp của Bộ Kế
+                                        hoạch và Đầu tư</a></h3>
+                            </div>
+                            <div class="wrap_figure">
+                                <figure><a href="#"><img
+                                            src="{{asset "images/tintuc-img4.jpg"}}"></a>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_news -->
+        <div class="omnicare_form tg_target1 wow animated zoomIn" data-wow-delay="0.3s" data-wow-duration="1s"
+            style="animation-duration: 1s; animation-delay: 0.3s; animation-name: none;">
+            <div class="container">
+                <div class="omnicare_title understand_title_mb">
+                    <h2>Liên hệ với chúng tôi</h2>
+                </div>
+                <div class="form_general">
+                    <div class="ct_left">
+                        <div class="form_detailds">
+                            <b><span class="omnicare_orange">3 lý do</span> các doanh nghiệp bán lẻ đã chọn Omni
+                                Care</b>
+                        </div>
+                        <div class="form_detailds">
+                            <div class="form_ct">
+                                <figure><img
+                                        src="{{asset "images/lienhe-icon1.svg"}}">
+                                </figure>
+                                <strong>Kiểm soát dữ liệu <p></p> và bảo mật</strong>
+                                <span>Dữ liệu khách hàng là tài sản quý giá nhất của mỗi doanh nghiệp. Mô hình triển
+                                    khai on-premise giúp doanh nghiệp có sự kiểm soát và bảo mật tuyệt đối với dữ
+                                    liệu</span>
+                            </div>
+                        </div>
+                        <div class="form_detailds">
+                            <div class="form_ct">
+                                <figure><img
+                                        src="{{asset "images/lienhe-icon2.svg"}}">
+                                </figure>
+                                <strong>Linh hoạt tùy biến</strong>
+                                <span>Doanh nghiệp có thể linh hoạt tùy chỉnh phần mềm theo quy trình riêng của mình,
+                                    đáp ứng yêu cầu kinh doanh cụ thể, không phụ thuộc nhà cung cấp</span>
+                            </div>
+                        </div>
+
+                        <div class="form_detailds">
+                            <div class="form_ct">
+                                <figure><img
+                                        src="{{asset "images/lienhe-icon3.svg"}}">
+                                </figure>
+                                <strong>Sự có mặt của AI</strong>
+                                <span>AI được sử dụng trong phần lớn các module sản phẩm: phân tệp khách hàng phục vụ
+                                    chiến dịch, đưa ra khuyến nghị bán hàng, trợ giúp khách hàng tự phục vụ...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ct_right">
+                        <div class="omnicare_title understand_title_des">
+                            <h2>Liên hệ với chúng tôi</h2>
+                        </div>
+                        <span>Hãy để lại thông tin, chúng tôi sẽ giải đáp thắc mắc với bạn trong khoảng thời gian sớm
+                            nhất</span>
+                        <form>
+                            <div class="form_group row">
+                                <div class="list_group col-sm-4">
+                                    <input type="text" id="name_form" class="textfield__input" required="">
+                                    <label for="name_form" class="textfield__label textfield__label--required">Họ và
+                                        tên</label>
+                                </div>
+                                <div class="list_group col-sm-4">
+                                    <input type="number" id="phone_form" class="textfield__input" required="">
+                                    <label for="phone_form" class="textfield__label textfield__label--required">Số điện
+                                        thoại</label>
+                                </div>
+                                <div class="list_group col-sm-4">
+                                    <input type="email" id="email_form" class="textfield__input" required="">
+                                    <label for="email_form"
+                                        class="textfield__label textfield__label--required">Email</label>
+                                </div>
+                                <div class="list_group col-sm-6">
+                                    <input type="text" id="business_form" class="textfield__input" required="">
+                                    <label for="business_form"
+                                        class="textfield__label textfield__label--required">Email</label>
+                                </div>
+                                <div class="list_group col-sm-6">
+                                    <select>
+                                        <option value="0">Lựa chọn tiêu đề thư</option>
+                                        <option value="1">Lựa chọn tiêu đề thư 1</option>
+                                        <option value="2">Lựa chọn tiêu đề thư 2</option>
+                                    </select>
+                                </div>
+                                <div class="list_group col-sm-12">
+                                    <strong>Nội dung</strong>
+                                    <textarea placeholder="Viết nội dung tại đây"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_button">
+                                <div class="button_left">
+                                    <input id="privacy_confirm" name="privacy_confirm" type="checkbox" value="yes">
+                                    <label for="privacy_confirm">Tôi đồng ý với <a href="#">chính sách quyền riêng
+                                            tư</a></label>
+                                </div>
+                                <div class="button_right">
+                                    <button type="submit" class="qb_btn">Gửi yêu cầu <svg width="12" height="11"
+                                            viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.5 1H10.5M10.5 1V9M10.5 1L1.5 10" stroke="white"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </svg></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- omnicare_form -->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="top_ft">
+                        <figure><img
+                                src="{{asset "images/omnicare-ft-logo.png"}}">
+                        </figure>
+                    </div>
+                    <div class="middle_ft">
+                        <div class="ct_left">
+                            <div class="middle_ft_ct">
+                                <strong>Địa chỉ</strong>
+                                <span>Tầng 6, toà nhà Ocean Park, số 1 Đào Duy Anh, <p></p> Phương Mai, Đống Đa, Hà
+                                    Nội</span>
+                            </div>
+                            <div class="middle_ft_ct">
+                                <strong>Liên hệ</strong>
+                                <a href="tel:(+84)97.583.0096" class="middle_ft_phone">(+84) 97 583 0096</a>
+                                <a href="mailto:ssolutions@runsystem.net"
+                                    class="middle_ft_mail">ssolutions@runsystem.net</a>
+                            </div>
+                        </div>
+                        <div class="ct_right">
+                            <div class="middle_ft_menu">
+                                <strong>Giải pháp</strong>
+                                <ul>
+                                    <li><a href="#">Tự động hóa</a></li>
+                                    <li><a href="#">Vận hành</a></li>
+                                    <li><a href="#">Quản lý</a></li>
+                                    <li><a href="#">Sales &amp; Marketing</a></li>
+                                </ul>
+                            </div>
+                            <div class="middle_ft_menu">
+                                <strong>Case studies</strong>
+                                <ul>
+                                    <li><a href="#">Sản phẩm</a></li>
+                                    <li><a href="#">Thị trường</a></li>
+                                    <li><a href="#">Tin tức - Sứ kiện</a></li>
+                                    <li><a href="#">Kiến thức chuyển đổi số</a></li>
+                                </ul>
+                            </div>
+                            <div class="middle_ft_menu">
+                                <strong>Về chúng tôi</strong>
+                                <ul>
+                                    <li><a href="#">GMO-Z.com Runystem</a></li>
+                                    <li><a href="#">Dịch vụ</a></li>
+                                    <li><a href="#">Quy trình làm việc</a></li>
+                                    <li><a href="#">Cơ hội làm việc</a></li>
+                                    <li><a href="#">Sales Kit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_ft">
+                        <div class="ct_left">
+                            <span>Copyright © 2023 GMO - Z.com RUNSYSTEM. All Rights Reserved.</span>
+                        </div>
+                        <div class="ct_right">
+                            <ul>
+                                <li><a href="#"><svg width="11" height="17" viewBox="0 0 11 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.66164 16.5C6.93778 16.5 7.16164 16.2761 7.16164 16V9.6583H8.95719C9.20858 9.6583 9.42088 9.47165 9.45307 9.22233L9.79747 6.5552C9.81588 6.41262 9.77203 6.26901 9.6771 6.16103C9.58217 6.05306 9.44536 5.99117 9.30159 5.99117H7.16164V4.7886C7.16164 4.42372 7.21838 4.25652 7.28946 4.17206C7.34425 4.10696 7.49567 3.99057 7.98335 3.99057H7.98356L9.39471 3.98999C9.67077 3.98988 9.89451 3.76605 9.89451 3.48999V1.10442C9.89451 0.853189 9.70808 0.640968 9.45894 0.608592C9.19128 0.573809 8.33192 0.5 7.33777 0.5C6.21833 0.5 5.22392 0.843344 4.50793 1.55095C3.79039 2.26009 3.40798 3.28019 3.40798 4.52445V5.99117H1.60547C1.32933 5.99117 1.10547 6.21503 1.10547 6.49117V9.1583C1.10547 9.43444 1.32933 9.6583 1.60547 9.6583H3.40798V16C3.40798 16.2761 3.63184 16.5 3.90798 16.5H6.66164Z"
+                                                stroke="#2C0B03" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></li>
+                                <li><a href="#"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <mask id="path-1-outside-1_2669_370" maskUnits="userSpaceOnUse" x="0" y="0"
+                                                width="13" height="13" fill="black">
+                                                <rect fill="white" width="13" height="13"></rect>
+                                                <path
+                                                    d="M2.46613 1C1.65831 1 1.00059 1.65759 1 2.46604C1 3.2745 1.65771 3.93222 2.46613 3.93222C3.27425 3.93222 3.93162 3.2745 3.93162 2.46604C3.93162 1.65767 3.2742 1 2.46613 1ZM3.56647 4.52128H1.36561C1.34071 4.52128 1.31605 4.52618 1.29304 4.53572C1.27004 4.54525 1.24913 4.55922 1.23152 4.57683C1.21392 4.59444 1.19995 4.61535 1.19043 4.63836C1.1809 4.66137 1.176 4.68603 1.176 4.71093V11.7948C1.176 11.8451 1.19598 11.8934 1.23154 11.9289C1.2671 11.9645 1.31533 11.9845 1.36561 11.9845H3.56643C3.61672 11.9844 3.66494 11.9645 3.70051 11.9289C3.73607 11.8934 3.75606 11.8451 3.75608 11.7948V4.71093C3.7561 4.68602 3.75121 4.66136 3.74168 4.63834C3.73216 4.61533 3.7182 4.59442 3.70059 4.5768C3.68298 4.55919 3.66207 4.54522 3.63906 4.53569C3.61604 4.52617 3.59138 4.52127 3.56647 4.52128ZM9.19288 4.43788C8.38746 4.43788 7.67969 4.68313 7.24779 5.08305V4.71093C7.24779 4.60615 7.16287 4.52128 7.05813 4.52128H4.94697C4.92206 4.52128 4.8974 4.52618 4.87439 4.53572C4.85138 4.54525 4.83047 4.55922 4.81286 4.57683C4.79525 4.59444 4.78128 4.61534 4.77175 4.63835C4.76222 4.66136 4.75731 4.68602 4.75731 4.71093V11.7948C4.75731 11.8198 4.76222 11.8444 4.77175 11.8674C4.78128 11.8904 4.79525 11.9113 4.81286 11.9289C4.83048 11.9465 4.85138 11.9605 4.87439 11.97C4.8974 11.9796 4.92206 11.9845 4.94697 11.9845H7.14571C7.196 11.9844 7.24423 11.9645 7.27979 11.9289C7.31535 11.8934 7.33534 11.8451 7.33536 11.7948V8.29009C7.33536 7.2845 7.52033 6.66122 8.4434 6.66122C9.35283 6.66232 9.42089 7.33068 9.42089 8.35016V11.7948C9.42089 11.8198 9.42581 11.8444 9.43534 11.8674C9.44488 11.8904 9.45885 11.9113 9.47647 11.9289C9.49408 11.9465 9.51499 11.9605 9.538 11.97C9.56101 11.9796 9.58568 11.9845 9.61058 11.9845H11.8103C11.8606 11.9844 11.9088 11.9645 11.9444 11.9289C11.98 11.8934 11.9999 11.8451 12 11.7948V7.90901C11.9999 6.2929 11.6809 4.43788 9.19288 4.43788Z">
+                                                </path>
+                                            </mask>
+                                            <path
+                                                d="M1 2.46604L0 2.46531V2.46604H1ZM3.56647 4.52128V5.52128H3.56692L3.56647 4.52128ZM1.36561 4.52128L1.36561 5.52128H1.36561V4.52128ZM1.176 4.71093H2.176V4.71071L1.176 4.71093ZM3.56643 11.9845V12.9845H3.56665L3.56643 11.9845ZM3.75608 11.7948L4.75608 11.7953V11.7948H3.75608ZM3.75608 4.71093L2.75608 4.71026V4.71093H3.75608ZM7.24779 5.08305H6.24779V7.37186L7.9272 5.8168L7.24779 5.08305ZM4.94697 4.52128V3.52128V4.52128ZM4.75731 11.7948H5.75731H4.75731ZM4.94697 11.9845V10.9845H4.94674L4.94697 11.9845ZM7.14571 11.9845V12.9845H7.14594L7.14571 11.9845ZM7.33536 11.7948L8.33536 11.7953V11.7948H7.33536ZM8.4434 6.66122L8.44461 5.66122H8.4434V6.66122ZM9.42089 11.7948H8.42089V11.7951L9.42089 11.7948ZM9.61058 11.9845V10.9845H9.61036L9.61058 11.9845ZM11.8103 11.9845V12.9845H11.8106L11.8103 11.9845ZM12 11.7948L13 11.7951V11.7948H12ZM12 7.90901H13V7.90899L12 7.90901ZM2.46613 0C1.10571 0 0.000995159 1.10545 2.38419e-07 2.46531L2 2.46678C2.00019 2.20972 2.2109 2 2.46613 2V0ZM0 2.46604C0 3.82677 1.10541 4.93222 2.46613 4.93222V2.93222C2.21002 2.93222 2 2.72224 2 2.46604H0ZM2.46613 4.93222C3.82698 4.93222 4.93162 3.82633 4.93162 2.46604H2.93162C2.93162 2.72267 2.72151 2.93222 2.46613 2.93222V4.93222ZM4.93162 2.46604C4.93162 1.10575 3.82685 0 2.46613 0V2C2.72156 2 2.93162 2.2096 2.93162 2.46604H4.93162ZM3.56647 3.52128H1.36561V5.52128H3.56647V3.52128ZM1.36561 3.52128C1.20936 3.52128 1.05465 3.55206 0.910308 3.61186L1.67578 5.45957C1.57745 5.50031 1.47205 5.52128 1.36561 5.52128L1.36561 3.52128ZM0.910308 3.61186C0.765965 3.67166 0.634811 3.7593 0.524339 3.8698L1.93871 5.28386C1.86345 5.35913 1.77411 5.41884 1.67578 5.45957L0.910308 3.61186ZM0.524339 3.8698C0.41387 3.98029 0.32625 4.11147 0.266482 4.25583L2.11437 5.02089C2.07365 5.11923 2.01396 5.20859 1.93871 5.28386L0.524339 3.8698ZM0.266482 4.25583C0.206714 4.40019 0.17597 4.55491 0.176005 4.71115L2.176 4.71071C2.17603 4.81714 2.15508 4.92254 2.11437 5.02089L0.266482 4.25583ZM0.176005 4.71093V11.7948H2.176V4.71093H0.176005ZM0.176005 11.7948C0.176005 12.1104 0.301341 12.4129 0.524433 12.636L1.93865 11.2218C2.09062 11.3738 2.176 11.5799 2.176 11.7948H0.176005ZM0.524433 12.636C0.747524 12.8591 1.0501 12.9845 1.36561 12.9845V10.9845C1.58055 10.9845 1.78667 11.0698 1.93865 11.2218L0.524433 12.636ZM1.36561 12.9845H3.56643V10.9845H1.36561V12.9845ZM3.56665 12.9845C3.88206 12.9844 4.18451 12.8591 4.40754 12.6361L2.99348 11.2217C3.14538 11.0699 3.35138 10.9845 3.56621 10.9845L3.56665 12.9845ZM4.40754 12.6361C4.63057 12.4131 4.75594 12.1107 4.75608 11.7953L2.75608 11.7944C2.75618 11.5796 2.84157 11.3736 2.99348 11.2217L4.40754 12.6361ZM4.75608 11.7948V4.71093H2.75608V11.7948H4.75608ZM4.75608 4.7116C4.75619 4.55528 4.72548 4.40047 4.66571 4.25602L2.81766 5.02067C2.77693 4.92225 2.75601 4.81677 2.75608 4.71026L4.75608 4.7116ZM4.66571 4.25602C4.60595 4.11157 4.5183 3.98032 4.40777 3.86978L2.9934 5.28383C2.9181 5.20851 2.85838 5.11908 2.81766 5.02067L4.66571 4.25602ZM4.40777 3.86978C4.29724 3.75922 4.16601 3.67155 4.02159 3.61175L3.25653 5.45964C3.15813 5.4189 3.06871 5.35916 2.9934 5.28383L4.40777 3.86978ZM4.02159 3.61175C3.87716 3.55195 3.72236 3.52121 3.56603 3.52128L3.56692 5.52128C3.4604 5.52133 3.35493 5.50038 3.25653 5.45964L4.02159 3.61175ZM9.19288 3.43788C8.21113 3.43788 7.23397 3.73298 6.56837 4.3493L7.9272 5.8168C8.1254 5.63328 8.5638 5.43788 9.19288 5.43788V3.43788ZM8.24779 5.08305V4.71093H6.24779V5.08305H8.24779ZM8.24779 4.71093C8.24779 4.05373 7.71501 3.52128 7.05813 3.52128V5.52128C6.61073 5.52128 6.24779 5.15858 6.24779 4.71093H8.24779ZM7.05813 3.52128H4.94697V5.52128H7.05813V3.52128ZM4.94697 3.52128C4.79074 3.52128 4.63604 3.55205 4.49171 3.61184L5.25707 5.45959C5.15876 5.50032 5.05338 5.52128 4.94697 5.52128V3.52128ZM4.49171 3.61184C4.34737 3.67162 4.21623 3.75925 4.10576 3.86972L5.51997 5.28393C5.44472 5.35918 5.35539 5.41887 5.25707 5.45959L4.49171 3.61184ZM4.10576 3.86972C3.99528 3.98019 3.90766 4.11134 3.84787 4.25567L5.69563 5.02104C5.65491 5.11935 5.59522 5.20868 5.51997 5.28393L4.10576 3.86972ZM3.84787 4.25567C3.78809 4.4 3.75731 4.5547 3.75731 4.71093H5.75731C5.75731 4.81735 5.73635 4.92272 5.69563 5.02104L3.84787 4.25567ZM3.75731 4.71093V11.7948H5.75731V4.71093H3.75731ZM3.75731 11.7948C3.75731 11.9511 3.7881 12.1058 3.84789 12.2502L5.69561 11.4847C5.73634 11.583 5.75731 11.6884 5.75731 11.7948H3.75731ZM3.84789 12.2502C3.9077 12.3945 3.99535 12.5257 4.10584 12.6361L5.51989 11.2218C5.59516 11.297 5.65487 11.3863 5.69561 11.4847L3.84789 12.2502ZM4.10584 12.6361C4.21633 12.7466 4.3475 12.8342 4.49186 12.894L5.25692 11.0461C5.35526 11.0868 5.44462 11.1465 5.51989 11.2218L4.10584 12.6361ZM4.49186 12.894C4.6362 12.9537 4.79091 12.9845 4.94719 12.9845L4.94674 10.9845C5.05321 10.9844 5.15861 11.0054 5.25692 11.0461L4.49186 12.894ZM4.94697 12.9845H7.14571V10.9845H4.94697V12.9845ZM7.14594 12.9845C7.46134 12.9844 7.76379 12.8591 7.98682 12.6361L6.57276 11.2217C6.72467 11.0699 6.93067 10.9845 7.14549 10.9845L7.14594 12.9845ZM7.98682 12.6361C8.20985 12.4131 8.33522 12.1107 8.33536 11.7953L6.33536 11.7944C6.33546 11.5796 6.42085 11.3736 6.57276 11.2217L7.98682 12.6361ZM8.33536 11.7948V8.29009H6.33536V11.7948H8.33536ZM8.33536 8.29009C8.33536 8.06391 8.34618 7.89485 8.36629 7.76832C8.38669 7.63995 8.41057 7.59628 8.41047 7.59645C8.40209 7.61105 8.37264 7.64629 8.33083 7.66736C8.30124 7.68227 8.32117 7.66122 8.4434 7.66122V5.66122C8.10409 5.66122 7.75475 5.71808 7.43086 5.88128C7.09476 6.05064 6.846 6.30455 6.67599 6.60067C6.37041 7.13293 6.33536 7.78182 6.33536 8.29009H8.33536ZM8.44219 7.66122C8.55228 7.66135 8.53738 7.68203 8.47392 7.64482C8.44198 7.62609 8.41246 7.60099 8.38926 7.5736C8.36728 7.54764 8.35906 7.52924 8.35906 7.52924C8.36316 7.53849 8.38532 7.59882 8.401 7.75577C8.4163 7.90882 8.42089 8.09938 8.42089 8.35016H10.4209C10.4209 7.88748 10.4193 7.24139 10.1873 6.71835C10.0526 6.41455 9.83087 6.12205 9.48568 5.91961C9.15368 5.72491 8.78924 5.66164 8.44461 5.66122L8.44219 7.66122ZM8.42089 8.35016V11.7948H10.4209V8.35016H8.42089ZM8.42089 11.7951C8.42092 11.9513 8.45173 12.106 8.51155 12.2503L10.3591 11.4845C10.3999 11.5828 10.4209 11.6882 10.4209 11.7946L8.42089 11.7951ZM8.51155 12.2503C8.57137 12.3946 8.65903 12.5258 8.76952 12.6362L10.1834 11.2217C10.2587 11.2969 10.3184 11.3862 10.3591 11.4845L8.51155 12.2503ZM8.76952 12.6362C8.88001 12.7466 9.01117 12.8342 9.15553 12.894L9.92048 11.0461C10.0188 11.0868 10.1082 11.1464 10.1834 11.2217L8.76952 12.6362ZM9.15553 12.894C9.29986 12.9537 9.45456 12.9845 9.6108 12.9845L9.61036 10.9845C9.7168 10.9844 9.82217 11.0054 9.92048 11.0461L9.15553 12.894ZM9.61058 12.9845H11.8103V10.9845H9.61058V12.9845ZM11.8106 12.9845C12.126 12.9844 12.4285 12.859 12.6515 12.636L11.2373 11.2218C11.3892 11.0699 11.5953 10.9845 11.8101 10.9845L11.8106 12.9845ZM12.6515 12.636C12.8745 12.413 12.9999 12.1105 13 11.7951L11 11.7946C11 11.5798 11.0854 11.3737 11.2373 11.2218L12.6515 12.636ZM13 11.7948V7.90901H11V11.7948H13ZM13 7.90899C12.9999 7.07802 12.9277 5.97416 12.3918 5.06122C11.7936 4.04206 10.7328 3.43788 9.19288 3.43788V5.43788C10.1409 5.43788 10.4836 5.76121 10.667 6.0736C10.9127 6.49219 10.9999 7.1239 11 7.90904L13 7.90899Z"
+                                                fill="#2C0B03" mask="url(#path-1-outside-1_2669_370)"></path>
+                                        </svg>
+
+                                    </a></li>
+                                <li><a href="#"><svg width="16" height="11" viewBox="0 0 16 11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.40935 10.9167H8.40537C7.95273 10.9136 3.95143 10.8772 2.81779 10.5712C2.02551 10.3586 1.40011 9.73515 1.18654 8.94436C0.889906 7.83289 0.908803 5.69315 0.910854 5.52225C0.90892 5.3522 0.889789 3.19471 1.18566 2.07414C1.18595 2.07312 1.18621 2.07198 1.18654 2.07095C1.39768 1.28917 2.0372 0.64636 2.81585 0.433239C2.81779 0.432655 2.81984 0.432216 2.8218 0.43166C3.94264 0.137696 7.95182 0.101703 8.40537 0.0986328H8.41349C8.86723 0.101703 12.8792 0.138163 14.0024 0.444584C14.7926 0.656564 15.4176 1.27926 15.6317 2.06905C15.9395 3.19038 15.911 5.35255 15.9079 5.53508C15.9101 5.71484 15.928 7.83543 15.6331 8.95243C15.6329 8.9536 15.6325 8.95462 15.6323 8.95565C15.4186 9.74646 14.7933 10.3699 14.0002 10.5827C13.9991 10.5831 13.998 10.5833 13.9969 10.5837C12.8762 10.8775 8.86691 10.9135 8.41349 10.9167H8.40938H8.40935ZM2.31836 2.3741C2.05791 3.36318 2.08252 5.49315 2.08273 5.51462V5.53005C2.07496 6.12076 2.1023 7.83142 2.31848 8.64168C2.4233 9.02968 2.73174 9.33698 3.12288 9.44194C3.95931 9.66775 7.21829 9.7388 8.40935 9.74714C9.60355 9.7388 12.8673 9.66971 13.6976 9.45294C14.0875 9.34762 14.3948 9.04132 14.5004 8.65285C14.7168 7.83075 14.7439 6.12839 14.736 5.54146C14.736 5.53532 14.736 5.52912 14.7361 5.52298C14.7469 4.92517 14.7257 3.1945 14.5014 2.37778C14.5012 2.37699 14.501 2.37618 14.5008 2.37535C14.3956 1.98566 14.087 1.67831 13.6959 1.57334C12.8675 1.34733 9.60332 1.27651 8.40935 1.26818C7.21598 1.27651 3.95544 1.34551 3.12265 1.56202C2.73895 1.66828 2.42354 1.98657 2.31836 2.3741ZM6.9158 7.87587V3.13933L11.0174 5.50766L6.9158 7.87587Z"
+                                                fill="#2C0B03"></path>
+                                        </svg>
+                                    </a></li>
+                                <li><a href="#"><svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.9853 4.41003C14.9501 3.613 14.821 3.0651 14.636 2.59029C14.4452 2.08631 14.1517 1.63511 13.7671 1.26001C13.3913 0.879076 12.9364 0.583062 12.4373 0.395584C11.959 0.210978 11.4129 0.0820471 10.6145 0.0469427C9.81013 0.00879076 9.55478 0 7.51467 0C5.47455 0 5.2192 0.00879076 4.4178 0.0439538C3.6194 0.0791168 3.07051 0.208107 2.595 0.392595C2.08999 0.583062 1.63799 0.876087 1.26223 1.26001C0.880625 1.63508 0.584236 2.08927 0.396281 2.58741C0.21135 3.0651 0.082221 3.61007 0.0470254 4.40704C0.00883561 5.21002 0 5.46492 0 7.50145C0 9.53797 0.00883561 9.79291 0.0440313 10.5929C0.0792563 11.3899 0.208473 11.9378 0.393434 12.4126C0.584236 12.9166 0.880625 13.3678 1.26223 13.7429C1.63799 14.1238 2.09298 14.4198 2.592 14.6073C3.07048 14.7919 3.6164 14.9208 4.41496 14.956C5.21621 14.9912 5.47171 14.9999 7.51182 14.9999C9.55194 14.9999 9.80729 14.9912 10.6087 14.956C11.4071 14.9208 11.956 14.7919 12.4315 14.6073C12.9309 14.4146 13.3845 14.1198 13.7631 13.7418C14.1417 13.3639 14.4371 12.9111 14.6302 12.4126C14.815 11.9349 14.9443 11.3899 14.9795 10.5929C15.0147 9.79291 15.0235 9.53797 15.0235 7.50145C15.0235 5.46492 15.0205 5.20999 14.9853 4.41003ZM13.6322 10.5343C13.5998 11.2668 13.4766 11.6624 13.3738 11.9261C13.1213 12.5796 12.6018 13.0982 11.9471 13.3503C11.683 13.4529 11.2838 13.5759 10.5528 13.608C9.76026 13.6433 9.52258 13.652 7.51766 13.652C5.51274 13.652 5.27207 13.6433 4.48235 13.608C3.7485 13.5759 3.35222 13.4529 3.08803 13.3503C2.76229 13.2301 2.46578 13.0396 2.22508 12.7906C1.97557 12.5473 1.78476 12.2543 1.66435 11.9291C1.56161 11.6654 1.43835 11.2668 1.40615 10.5372C1.37081 9.74608 1.36212 9.50867 1.36212 7.50728C1.36212 5.50589 1.37081 5.26564 1.40615 4.47746C1.43835 3.74489 1.56161 3.34931 1.66435 3.08559C1.78476 2.76027 1.97557 2.46434 2.22807 2.224C2.47159 1.97493 2.76513 1.78447 3.09102 1.66441C3.35521 1.56185 3.75449 1.43878 4.48535 1.40652C5.27791 1.37136 5.51574 1.36257 7.52051 1.36257C9.52842 1.36257 9.7661 1.37136 10.5558 1.40652C11.2897 1.43881 11.686 1.56182 11.9501 1.66438C12.2759 1.78447 12.5724 1.97493 12.8131 2.224C13.0626 2.46724 13.2534 2.76027 13.3738 3.08559C13.4766 3.34931 13.5998 3.74774 13.6321 4.47746C13.6674 5.26862 13.6762 5.50589 13.6762 7.50728C13.6762 9.50867 13.6674 9.74309 13.6322 10.5343Z"
+                                                fill="#2C0B03"></path>
+                                            <path
+                                                d="M7.51462 3.64809C5.38356 3.64809 3.65454 5.37395 3.65454 7.50138C3.65454 9.6288 5.38356 11.3547 7.51462 11.3547C9.64573 11.3547 11.3747 9.6288 11.3747 7.50138C11.3747 5.37395 9.64573 3.64809 7.51462 3.64809ZM7.51462 10.0009C6.13209 10.0009 5.01065 8.88158 5.01065 7.50138C5.01065 6.12117 6.13209 5.00187 7.51459 5.00187C8.89723 5.00187 10.0185 6.12117 10.0185 7.50138C10.0185 8.88158 8.8972 10.0009 7.51462 10.0009ZM12.4286 3.49572C12.4286 3.99252 12.025 4.39531 11.5273 4.39531C11.0296 4.39531 10.6261 3.99252 10.6261 3.49572C10.6261 2.99887 11.0296 2.59619 11.5273 2.59619C12.025 2.59619 12.4286 2.99884 12.4286 3.49572Z"
+                                                fill="#2C0B03"></path>
+                                        </svg>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+    <script src="{{asset "js/wow.min.js"}}"></script>
+    <script src="{{asset "js/jquery.min.js"}}"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cache.img.gmo.jp/gmo/header/zcom/script.min.js" id="gmoheadertag" async="async"></script>
+    {{ghost_foot}}
+</body>
+</html>
